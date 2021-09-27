@@ -1,7 +1,7 @@
-import 'package:animated_drawer/bloc/generic_bloc.dart';
-import 'package:animated_drawer/constants/runtime_variables.dart';
-import 'package:animated_drawer/views/first_layer.dart';
-import 'package:animated_drawer/views/shadow.dart';
+import 'package:animated_drawer2/bloc/generic_bloc.dart';
+import 'package:animated_drawer2/constants/runtime_variables.dart';
+import 'package:animated_drawer2/views/first_layer.dart';
+import 'package:animated_drawer2/views/shadow.dart';
 import 'package:flutter/material.dart';
 
 import 'home_page.dart';
@@ -9,62 +9,62 @@ import 'third_layer.dart';
 
 class AnimatedDrawer extends StatefulWidget {
   ///Gradient for First Layer background color.
-  final Gradient backgroundGradient;
+  final LinearGradient backgroundGradient;
 
   ///Color for Shadow Widget
-  final Color shadowColor;
+  final Color? shadowColor;
 
   ///Widget for Menu Page
-  final Widget menuPageContent;
+  final Widget? menuPageContent;
 
   ///Widget for Home Page
-  final Widget homePageContent;
+  final Widget? homePageContent;
 
   ///X-Axis Value of Home Page.
   ///
   ///If [homePageXValue] argument is null, widget will use predined values.
-  final double homePageXValue;
+  final double? homePageXValue;
 
   ///Y-Axis Value of Home Page.
   ///
   ///If [homePageYValue] argument is null, widget will use predined values.
-  final double homePageYValue;
+  final double? homePageYValue;
 
   ///Angle Value of Home Page.
   ///
   ///If [homePageAngle] argument is null, widget will use predined values.
-  final double homePageAngle;
+  final double? homePageAngle;
 
   ///X-Axis Value of Second Page.
   ///
   ///If [shadowXValue] argument is null, widget will use predined values.
-  final double shadowXValue;
+  final double? shadowXValue;
 
   ///Y-Axis Value of Second Page
   ///
   ///If [shadowYValue] argument is null, widget will use predined values.
-  final double shadowYValue;
+  final double? shadowYValue;
 
   ///Angle Value of Second Page
   ///
   ///If [shadowAngle] argument is null, widget will use predined values.
-  final double shadowAngle;
+  final double? shadowAngle;
 
   ///Time Duration value of Home Page Animation
   ///
   ///If [homePageSpeed] argument is null, widget will use predined values.
-  final int homePageSpeed;
+  final int? homePageSpeed;
 
   ///Time Duration value of Second Page Animation
   ///
   ///If [shadowSpeed] argument is null, widget will use predined values.
-  final int shadowSpeed;
+  final int? shadowSpeed;
 
   ///[openIcon] is the [Icon] or [Image] which is displayed when the Darwer is closed. If [openIcon] argument is null, Icon(Icons.menu) will be used.
-  final Widget openIcon;
+  final Widget? openIcon;
 
   ///[closeIcon] is the [Icon] or [Image] which is displayed when the Darwer is opened. If [closeIcon] argument is null, Icon(Icons.arrow_back_ios) will be used.
-  final Widget closeIcon;
+  final Widget? closeIcon;
 
   ///A widget to make Animated Drawer with translating X-Axis, Y-Axis and Angle Coordinates.
   ///
@@ -76,10 +76,10 @@ class AnimatedDrawer extends StatefulWidget {
   ///[shadowColor] argument takes a [Color] argument and set it as shadow behind the homePage widget.
   ///Optional arguments [homePageXValue],[homePageYValue], [homePageAngle], [homePageSpeed], [shadowXValue], [shadowYValue], [shadowAngle], [shadowSpeed] if not provided or provided null, default values will be used.
   AnimatedDrawer(
-      {@required this.backgroundGradient,
-      @required this.menuPageContent,
-      @required this.homePageContent,
-      @required this.shadowColor,
+      {required this.backgroundGradient,
+      required this.menuPageContent,
+      required this.homePageContent,
+      required this.shadowColor,
       this.openIcon,
       this.closeIcon,
       this.homePageXValue,

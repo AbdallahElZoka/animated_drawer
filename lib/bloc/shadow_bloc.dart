@@ -1,5 +1,5 @@
-import 'package:animated_drawer/constants/constants.dart';
-import 'package:animated_drawer/constants/runtime_variables.dart';
+import 'package:animated_drawer2/constants/constants.dart';
+import 'package:animated_drawer2/constants/runtime_variables.dart';
 
 class ShadowBLOC {
   //These arguments hold values to which widget will translate in animation.

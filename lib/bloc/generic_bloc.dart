@@ -1,4 +1,4 @@
-import 'package:animated_drawer/constants/constants.dart';
+import 'package:animated_drawer2/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:matrix4_transform/matrix4_transform.dart';
 
@@ -24,10 +24,10 @@ class GenericBLOC {
   //generic function for to translate values of animated container in HomePage and Shadow widget
   //Use of third party package MATRIX4TRANSFORM to transform the angle of widget at given angle
 
-  static changeValues(double xoffSet, double yoffSet, double angle) {
+  static changeValues(double? xoffSet, double? yoffSet, double? angle) {
     return Matrix4Transform()
-        .translate(x: xoffSet, y: yoffSet)
-        .rotate(angle)
+        .translate(x: xoffSet ?? 0, y: yoffSet ?? 0)
+        .rotate(angle ?? 0)
         .matrix4;
   }
 

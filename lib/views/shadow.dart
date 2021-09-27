@@ -1,13 +1,13 @@
-import 'package:animated_drawer/bloc/generic_bloc.dart';
-import 'package:animated_drawer/bloc/shadow_bloc.dart';
-import 'package:animated_drawer/constants/constants.dart';
-import 'package:animated_drawer/constants/runtime_variables.dart';
+import 'package:animated_drawer2/bloc/generic_bloc.dart';
+import 'package:animated_drawer2/bloc/shadow_bloc.dart';
+import 'package:animated_drawer2/constants/constants.dart';
+import 'package:animated_drawer2/constants/runtime_variables.dart';
 import 'package:flutter/material.dart';
 
-ShadowState shadowState;
+ShadowState? shadowState;
 
 class Shadow extends StatefulWidget {
-  final Color bgColor;
+  final Color? bgColor;
 
   Shadow({@required this.bgColor});
 

@@ -1,8 +1,8 @@
-import 'package:animated_drawer/constants/constants.dart';
+import 'package:animated_drawer2/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class ThirdLayer extends StatelessWidget {
-  final Widget menu;
+  final Widget? menu;
 
   ThirdLayer({@required this.menu});
 

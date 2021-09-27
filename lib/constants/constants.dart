@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class Constants {
   ///Constants for device height constraint
 
-  static double height;
+  static double? height;
 
   ///Constants for device width constraint
 
-  static double width;
+  static double? width;
 
   ///Border Radius Constant for Widget which are Translating and will be Animated, this Constant is used when Widget is Translated and is in Open State.
 

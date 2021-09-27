@@ -1,13 +1,13 @@
-import 'package:animated_drawer/bloc/generic_bloc.dart';
-import 'package:animated_drawer/bloc/home_page_bloc.dart';
-import 'package:animated_drawer/bloc/shadow_bloc.dart';
-import 'package:animated_drawer/constants/constants.dart';
-import 'package:animated_drawer/constants/runtime_variables.dart';
-import 'package:animated_drawer/views/shadow.dart';
+import 'package:animated_drawer2/bloc/generic_bloc.dart';
+import 'package:animated_drawer2/bloc/home_page_bloc.dart';
+import 'package:animated_drawer2/bloc/shadow_bloc.dart';
+import 'package:animated_drawer2/constants/constants.dart';
+import 'package:animated_drawer2/constants/runtime_variables.dart';
+import 'package:animated_drawer2/views/shadow.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
-  final Widget body;
+  final Widget? body;
 
   HomePage({@required this.body});
 
@@ -22,8 +22,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         transform: GenericBLOC.changeValues(
             HomePageBloc.xoffSet, HomePageBloc.yoffSet, HomePageBloc.angle),
         duration: GenericBLOC.setDuration(
-            RuntimeVariables.homePageSpeedUserInput?? Constants.HOME_SCREEN_DURATION
-                ),
+            RuntimeVariables.homePageSpeedUserInput ??
+                Constants.HOME_SCREEN_DURATION),
         child: ClipRRect(
           borderRadius: GenericBLOC.getBorderRadius(),
           child: Stack(
@@ -38,19 +38,21 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   }
 
   _openButton() {
-    return IconButton(
+    return SizedBox();
+    /*return IconButton(
         icon: RuntimeVariables.openIconUserInput ?? Constants.DRAWER_OPEN_ICON,
         onPressed: () {
           HomePageBloc().openDrawer();
-          ShadowBLOC().openDrawer();
+
 
           setState(() {});
-          shadowState.setState(() {});
-        });
+          shadowState?.setState(() {});
+        });*/
   }
 
   _closeButton() {
-    return IconButton(
+    return SizedBox();
+    /*return IconButton(
         icon:
             RuntimeVariables.closeIconUserInput ?? Constants.DRAWER_CLOSE_ICON,
         onPressed: () {
@@ -58,7 +60,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           ShadowBLOC().closeDrawer();
 
           setState(() {});
-          shadowState.setState(() {});
-        });
+          shadowState?.setState(() {});
+        });*/
   }
 }

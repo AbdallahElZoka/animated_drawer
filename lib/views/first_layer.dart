@@ -1,9 +1,9 @@
-import 'package:animated_drawer/constants/constants.dart';
+import 'package:animated_drawer2/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class FirstLayer extends StatelessWidget {
-  final Gradient gradient;
+  final Gradient? gradient;
 
   FirstLayer({@required this.gradient});
 
